@@ -1,282 +1,415 @@
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+*, html {
+    margin:0;
+    padding:0;  
+}
+body {
+    color: #48485e;
+    font-family: "Open Sans",sans-serif;
+    font-size: 15px;
+    line-height: 1.42857;
+}
+p {
+    font-size: 16px;
+    line-height: 1.5625;
+    margin: 0 0 22px;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
+h2 {
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: inherit;
+    line-height: 1.21429;
+    margin-top: 20px;
+    margin-bottom: 10px;
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
 }
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+img {
     vertical-align: middle;
 }
 
-/*
- * Remove default fieldset styles.
- */
 
-fieldset {
-    border: 0;
+.margin-top-15 {
+    margin-top: 1rem;
+}
+.margin0 {
     margin: 0;
-    padding: 0;
 }
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
+.img-responsive {
+    display: block;
+    max-width: 100%;
     height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
+.container {
+    margin: 0 auto;
+    width: 83%;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
 }
 
-.clearfix:after {
+.row:after {
+    content: "";
+    display: table;
     clear: both;
 }
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+.row .col {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    padding: 0 .75rem;
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+.white-text {
+    color: #fff;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+.green-text {
+    color: #00c09d!important;
+}
 
-@media print {
-    *,
-    *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+    position: relative;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn-secondary {
+    color: #48485e;
+    background-color: #efff1d;
+}
+
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.23333;
+    border-radius: 3px;
+}
+
+.col.s4 {
+    margin-left: 0;
+    width: 33.33333%;
+}
+
+.col.s5 {
+    margin-left: 0;
+    width: 41.66667%;
+}
+
+.col.s6 {
+    margin-left: 0;
+    width: 50%;
+}
+
+.col.s7 {
+    margin-left: 0;
+    width: 58.33333%;
+}
+
+.col.s8 {
+    margin-left: 0;
+    width: 66.66667%;
+}
+
+.col.s9 {
+    margin-left: 0;
+    width: 75%;
+}
+
+.col.s12 {
+    margin-left: 0;
+    width: 100%;
+}
+
+
+.flex-col {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-right {
+    line-height: 5;
+}
+
+.down-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 5px solid white;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.sb-studen-story-bg {
+    background-image: url('https://d1v7bd3b0sjvlo.cloudfront.net/uploads/alumni/1450861461_sara_hero_p.jpg');
+    background-size: cover;
+    background-position: right!important;
+    min-height: 642px;
+}
+
+.student-name {
+    color: #fff;
+    font-size: 4.133rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.student-designation {
+    color: #fff;
+    font-size: 1.46rem;
+}
+
+.divider {
+    width: 50px;
+    height: 2px;
+    background-color: #efff1d;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.student-more-info {
+    color: #fff;
+    font-size: 1.2rem;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.student-more-info-course-name {
+    color: #efff1d;
+}
+
+.student-testimonial-message-body {
+    background-color: #efeff6;
+}
+
+.student-testimonial-message-container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.student-testimonial-message {
+    color: #48485e;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+     padding-left: 25px;
+}
+
+
+.student-testimonial-message:before {
+    content: "\201C";
+    font-size: 3rem;
+    line-height: 1;
+    color: #666!important;
+    font-family: "Roboto Black";
+    font-style: normal;
+    text-align: center;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+}
+
+.student-testimonial-message:after{
+    content: "\201D";
+    font-size: 3rem;
+    line-height: 0;
+    margin-left: .5rem;
+    margin-top: 1rem;
+    position: absolute;
+    color: #666!important;
+    font-family: "Roboto Black";
+    font-style: normal;
+    text-align: center;
+    font-weight: 700;
+    /*position: absolute;*/
+
+}
+
+.student-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.grey-text {
+    color: #7a7a7a;
+}
+
+.red-text {
+    color: #ef2964;
+}
+
+.quote-and-image {
+    margin-top: 40px;
+}
+
+.view-course-banner {
+    background-color: #00c09d;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.view-course-banner h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.26471;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.view-course button {
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-top: 30px;
+}
+
+.dark-gray {
+    background-color: #48485e;
+    position: relative;
+}
+
+.first-half {
+    padding: 50px 0;
+}
+
+.inputClass-head {
+    width: 51%;
+}
+
+.inputClass {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    height: 40px;
+    background-color: #3b3b4e;
+    border: none;
+    border-radius: 3px;
+    
+}
+
+.footer-site-link-col {
+    margin-top: 1rem;
+}
+
+.footer-site-link-header {
+    padding: 6px 0px;
+}
+
+.footer-site-link-list {
+    margin-top: 1rem;
+    list-style: none;
+}
+.footer-site-link-list li {
+    margin-bottom: 0.533rem;
+}
+@media only screen and (max-width: 600px) {
+    .view-course-banner h3 {
+        text-align: center;
+    }
+    .view-course-banner button {
+        width: 100%;
+    }
+    .student-testimonial-message {
+        font-size: 1.2rem;
+    }
+    .view-course-banner h3 {
+        font-size: 1.2rem;
+    }
+    .get-updates .btn {
+        width: 100%;
+    }
+    .image-top-20 {
+        margin-top: 20px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .col.m6 {
+        width: 50%;
+    }
+    .container {
+        width: 97%;
+    }
+    .student-testimonial-message {
+        font-size: 1.6rem;
     }
 
-    a,
-    a:visited {
-        text-decoration: underline;
+    
+}
+
+@media only screen and (max-width: 992px) {
+    .sb-studen-story-bg {
+        min-height: 430px;
+    }
+    .student-name {
+        font-size: 2.8rem;
+    }
+    .student-designation {
+        font-size: 1.33rem;
+    }
+    .student-more-info {
+        font-size: 1.0667rem;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .padding-right0 {
+        padding-right: 0 !important;
     }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
+    .padding-left0 {
+        padding-left: 0 !important;
     }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
+    .col.l3 {
+        width: 25%;
     }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
+    .col.l4 {
+        width: 33.33333%;
     }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
+    .col.l5 {
+         width: 41.66667%;
     }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
+    .col.l6{
+        width: 50%;
     }
-
-    tr,
-    img {
-        page-break-inside: avoid;
+    .col.l7 {
+        width: 58.33333%;
     }
-
-    img {
-        max-width: 100% !important;
+    .col.l8 {
+        width: 66.66667%;
     }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
+    .col.offset-l1 {
+       margin-left: 8.33333%;
     }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
+    .image-top-40 {
+        margin-top: 40px;
+    }
+    .inputClass {
+        padding: 0px 12px;
     }
 }
