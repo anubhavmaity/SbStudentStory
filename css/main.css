@@ -5,13 +5,13 @@
 html, body {
     width: 100%;
     height: 100%;
-    overflow-x: hidden; 
 }
 body {
     color: #48485e;
     font-family: "Open Sans",sans-serif;
     font-size: 15px;
     line-height: 1.42857;
+    overflow-x: hidden; 
 }
 p {
     font-size: 16px;
@@ -47,14 +47,8 @@ img {
     cursor: pointer;
     color: #fff;
     display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
 }
-.scroll-down-arrow:before {
-    content: "\f078";
-}
+
 
 .margin-top-15 {
     margin-top: 1rem;
