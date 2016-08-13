@@ -2,6 +2,11 @@
     margin:0;
     padding:0;  
 }
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; 
+}
 body {
     color: #48485e;
     font-family: "Open Sans",sans-serif;
@@ -164,10 +169,20 @@ img {
 }
 
 .sb-studen-story-bg {
+    background-color: #15ad9e;
     background-image: url('https://d1v7bd3b0sjvlo.cloudfront.net/uploads/alumni/1450861461_sara_hero_p.jpg');
     background-size: cover;
     background-position: right!important;
     min-height: 642px;
+    padding-bottom: 4rem;
+}
+
+.sb-studen-story-bg-mob {
+    background-color: #15ad9e;
+    background-image: url('https://d1v7bd3b0sjvlo.cloudfront.net/uploads/alumni/1450861461_sara_hero_mob.jpg') ;
+    background-size: cover;
+    background-position: right!important;
+    padding-bottom: 4rem;
 }
 
 .student-name {
@@ -297,7 +312,14 @@ img {
 .first-half {
     padding: 50px 0;
 }
+.second-half {
+    background-color: #3b3b4e; 
+}
 
+.footer-second-div {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 .inputClass-head {
     width: 51%;
 }
@@ -328,7 +350,32 @@ img {
 .footer-site-link-list li {
     margin-bottom: 0.533rem;
 }
+
+
+.follow-img {
+    width: 40px;
+    height: 40px;
+}
+
+
 @media only screen and (max-width: 600px) {
+    .logo {
+        margin-top: 1rem;
+        width: 100px;
+
+    }
+    .sb-studen-story-bg {
+        display: none;
+    }
+    .sb-studen-story-bg-mob {
+        min-height: 330px;
+    }
+    .student-name {
+        font-size: 2rem;   
+    }
+    .student-designation {
+        font-size: 1.2rem;
+    }
     .view-course-banner h3 {
         text-align: center;
     }
@@ -347,24 +394,44 @@ img {
     .image-top-20 {
         margin-top: 20px;
     }
+    .footer-second-div {
+        text-align: center;
+    }
+    .inline_follow_toolbox {
+        line-height: 3;
+        text-align: center;
+    }
 }
+
+@media only screen and (min-width: 600px) {
+    .sb-studen-story-bg-mob {
+        display: none;
+    }
+    .inline_follow_toolbox {
+       float: right;
+        line-height: 3;
+    }
+}
+
 @media only screen and (min-width: 600px) and (max-width: 992px) {
+    .col.m4{
+        width: 33.33333%;
+    }
+    .col.m5{
+        width: 41.66667%;
+    }
     .col.m6 {
         width: 50%;
     }
+    .col.m7{
+        width: 58.33333%;
+    }
+    .col.m8{
+        width: 66.66667%;
+    }
+    
     .container {
         width: 97%;
-    }
-    .student-testimonial-message {
-        font-size: 1.6rem;
-    }
-
-    
-}
-
-@media only screen and (max-width: 992px) {
-    .sb-studen-story-bg {
-        min-height: 430px;
     }
     .student-name {
         font-size: 2.8rem;
@@ -372,6 +439,23 @@ img {
     .student-designation {
         font-size: 1.33rem;
     }
+    .student-testimonial-message {
+        font-size: 1.6rem;
+    }
+    .view-course-banner h3 {
+        font-size: 1.6rem;
+    }
+    
+}
+
+@media only screen and (max-width: 992px) {
+    .sb-studen-story-bg {
+        min-height: 430px;
+    }
+    .header-right-col-mob {
+        display: none;
+    }
+    
     .student-more-info {
         font-size: 1.0667rem;
     }
@@ -411,5 +495,8 @@ img {
     }
     .inputClass {
         padding: 0px 12px;
+    }
+    .sb-studen-story-bg-top-col {
+        margin-top: 4rem;
     }
 }
