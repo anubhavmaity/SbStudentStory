@@ -28,11 +28,33 @@
                             <img src="https://www.springboard.com/images/springboard/springboard_logo.c9ce99a3.png">
                         </div>
                         <div class="col l5 m6 white-text ">
-                            <div class="flex-col header-right">
+                            <div class="flex-col header-right hide-on-med-and-down">
                                 <span>WORKSHOPS</span>
                                 <span>RESOURCES<span class="down-arrow"></span></span>
                                 <span>BLOG</span>
                                 <span>MY ACCOUNT</span>
+                            </div>
+                            <div class="hide-on-large-only">
+                                <div class="mobile-menu-icon">
+                                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="#ef2964" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                                    </svg>
+                                </div>
+                                <div class="mobile-menu">
+                                    <div class="">
+                                        <div class="right mobile-menu-close">
+                                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                                <path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <ul class="mobile-menu-content">
+                                        <li>WORKSHOPS</li>
+                                        <li>RESOURCES</li>
+                                        <li>BLOG</li>
+                                        <li>MY ACCOUNT</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -74,13 +96,28 @@
                         <div class="col l7 m6 s6">
                             <img src="https://www.springboard.com/images/springboard/springboard_logo.c9ce99a3.png" class="logo">
                         </div>
-                        <div class="col l5 m6 s6 white-text header-right-col-mob">
-                            <ul class="menu">
-                                <li>WORKSHOPS</li>
-                                <li>RESOURCES</li>
-                                <li>BLOG</li>
-                                <li>MY ACCOUNT</li>
-                            </ul>
+                        <div class="col l5 m6 s6 white-text ">
+                            <div class="mobile-menu-icon">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#ef2964" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                                </svg>
+                            </div>
+                            <div class="mobile-menu">
+                                <div class="">
+                                    <div class="right mobile-menu-close">
+                                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                            <path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <ul class="mobile-menu-content">
+                                    <li>WORKSHOPS</li>
+                                    <li>RESOURCES</li>
+                                    <li>BLOG</li>
+                                    <li>MY ACCOUNT</li>
+                                </ul>
+                            </div>
+                            
                         </div>
 
                     </div>
@@ -296,6 +333,18 @@
                     // console.log($(".student-testimonial-message-body"));
                     scrollTop: $(".student-testimonial-message-body").offset().top
                 },'slow');
+            });
+
+            $(".mobile-menu-icon").on("click", function(e){
+                if ( !$(".mobile-menu").hasClass("exposed") ) {
+                    $(".mobile-menu").addClass("exposed");
+                } 
+            });
+
+            $(".mobile-menu-close").on("click", function(e){
+                if( $(".mobile-menu").hasClass("exposed") ) {
+                  $(".mobile-menu").removeClass("exposed");  
+                }
             });
         });
             
